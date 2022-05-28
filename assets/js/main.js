@@ -4,37 +4,35 @@
 console.log('hello world');
 
 /**
- * load items
+ * Call the function getItems() when the page is loaded and the DOM is ready to get items and display them
  */
 getItems();
 
-
+/**
+ * Listenning the change event on the html select element (select a category for laptops)
+ */
 document.getElementById('category').addEventListener('change', (e) => {
+    // get the value of the selected option by call getLaptops function with the value of the selected option
+    // e represents the event
+    // e.target is the element that triggered the event
+    // e.target.value is the value of the selected option
     getLaptops(e.target.value);
 });
 
-//getPostsFromServer();
-
+/**
+ * Listenning the submit event on the html form element (create item)
+ * @note: the submit event is triggered when the form is submitted
+ * @note: handle form with Javascript step by step on https://flaviocopes.com/form-events/
+ */
 document.getElementById('item-form').addEventListener('submit', (e) => {
+    // prevent the default behavior of the form
     e.preventDefault();
+    // get the value of the input name, price, category in a new object
     const item = {
         name : e.target.name.value,
         price : e.target.price.value,
         category : e.target.category.value
     }
-    if (item.name === '' || item.price === '' || item.category === '') {
-        alert('Please fill all the fields');
-    } else {
-        axios.post('http://localhost:5050/api/items', item)
-        .then(res => {
-            if (res.data.item) {
-                getItems();
-                e.target.name.value = '';
-                e.target.price.value = '';
-                e.target.category.value = '';
-            } else {
-                alert('Something went wrong');
-            }
-        });
-    }
+    // call the function handleCreateItem with the new object to create a new item
+    handleCreateItem(item);
 })

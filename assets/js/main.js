@@ -1,12 +1,19 @@
+/**
+ * check if this js file is loaded
+ */
 console.log('hello world');
 
+/**
+ * load items
+ */
 getItems();
 
-getPostsFromServer();
 
 document.getElementById('category').addEventListener('change', (e) => {
-    getLaptopsFromServer(e.target.value);
+    getLaptops(e.target.value);
 });
+
+//getPostsFromServer();
 
 document.getElementById('item-form').addEventListener('submit', (e) => {
     e.preventDefault();

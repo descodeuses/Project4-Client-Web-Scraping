@@ -11,11 +11,17 @@
 <body>
     <header class="p-3"><h4>DesCodeuses</h4></header>
     <div class="container">
+        <!-- #items section -->
         <section id="items" class="my-3">
             <h3 class="text-center"># Items Section</h3>
+
+            <!-- JS will diplay items cards in this div -->
             <div class="row" id="items-list"></div>
+
             <div class="row">
                 <div class="col-10 mx-auto">
+                    <!-- JS handle this create form for #item -->
+                    <!-- To handle form in JS, make sure you have named all fields -->
                     <form class="mt-5" id="item-form">
                         <div class="form-group">
                             <label for="item-name">Item Name</label>
@@ -33,31 +39,47 @@
                             <button type="submit" class="btn btn-primary btn-sm my-3" id="add-item">Add Item</button>
                         </div>
                     </form>
+                    <!-- end form -->
                 </div>
             </div>
         </section>
+        <!-- end items section -->
+
+        <!-- #laptops section -->
         <section id="laptops" class="my-3">
             <h3 class="text-center"># Laptops Section</h3>
             <div class="row my-3 mx-auto">
+                <!--- JS listenning change event on this select and fetch data by user choice from server -->
                 <select class="form-select" aria-label="selectionner un type de produit" id="category">
-                    <option selected>Select a category</option>
+                    <option selected value="">Select a category</option>
                     <option value="linux-laptops">Linux Laptops</option>
                     <option value="mini-computers">Mini Computers</option>
                     <option value="accessories">Accessories</option>
                 </select>
             </div>
+
+            <!-- JS will diplay items cards in this div -->
             <div class="row" id="laptops-list"></div>
+
         </section>
+        <!-- end laptops section -->
+
+        <!-- #posts section -->
         <section id="posts" class="my-3">
             <h3 class="text-center"># Posts Section</h3>
+
+            <!-- JS will diplay items cards in this div -->
             <div class="row" id="posts-list"></div>
+
         </section>
+        <!-- end posts section -->
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="assets/js/dom-function.js"></script>
     <script src="assets/js/function.js"></script>
     <script src="assets/js/main.js"></script>
 </body>

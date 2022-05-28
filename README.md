@@ -7,7 +7,9 @@ Items data have complete CRUD operations, posts and laptops data have only read 
 
 All interections with dom elements are done with [javascript](https://developer.mozilla.org/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents) like displaying data and listenning events.
 
-[Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) is used as frontend css framework.
+Data are fetch with [axios](https://www.npmjs.com/package/axios). Axios CDN link is add in index.html.
+
+[Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) is used as frontend css framework. Bootstrap CDN link is add in index.html.
 
 To get started, you need to clone the [Node-Express-Server](https://github.com/descodeuses/Node-Express-Server), then follow the instructions in README.md.
 Once the server is running, you can run the client in your browser.
